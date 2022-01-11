@@ -1,0 +1,18 @@
+version: '3.7'
+
+networks:
+  nginx:
+    name: nginx
+    external: true
+
+services:
+  jenkins:
+    image: keyruu/nocodb-wrapper:latest
+    container_name: nocodb-wrapper
+    restart: always
+
+    networks:
+      - nginx
+
+    environment:
+      NOCODB_API_TOKEN: token
