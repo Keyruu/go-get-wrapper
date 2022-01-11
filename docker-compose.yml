@@ -16,3 +16,4 @@ services:
 
     environment:
       NOCODB_API_TOKEN: token
+      NOCODB_API_URL: url

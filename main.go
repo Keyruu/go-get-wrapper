@@ -13,7 +13,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		client := &http.Client{}
 
-		req, err := http.NewRequest("GET", "http://keyruu.de:8001/nc/music_m7ws/api/v1/releases", nil)
+		req, err := http.NewRequest("GET", os.Getenv("NOCODB_API_URL"), nil)
 		if err != nil {
 			panic(err)
 		}
