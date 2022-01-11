@@ -30,6 +30,8 @@ func main() {
 			panic(err)
 		}
 
+		w.Header().Add("Content-Type", "application/json")
+
 		w.Write(bytes)
 	})
 
