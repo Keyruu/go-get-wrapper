@@ -30,6 +30,7 @@ func main() {
 			panic(err)
 		}
 
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Add("Content-Type", "application/json")
 
 		w.Write(bytes)
