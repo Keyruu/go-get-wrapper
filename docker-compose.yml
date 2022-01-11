@@ -6,7 +6,7 @@ networks:
     external: true
 
 services:
-  jenkins:
+  nocodb-wrapper:
     image: keyruu/nocodb-wrapper:latest
     container_name: nocodb-wrapper
     restart: always
